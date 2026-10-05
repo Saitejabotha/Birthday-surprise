@@ -1,0 +1,977 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #17365f;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 560px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.opening-page {
+    display: flex;
+}
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    line-height: 1.15;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.little-heading {
+    color: #5b7db1;
+    font-size: 0.78rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.main-button,
+.secondary-button {
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+.main-button {
+    border: none;
+    padding: 14px 30px;
+    border-radius: 50px;
+    background: #174ea6;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 10px 28px rgba(23, 78, 166, 0.25);
+}
+
+.main-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(23, 78, 166, 0.35);
+}
+
+.secondary-button {
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #174ea6;
+    border: 1px solid #cbdcf3;
+    font-size: 0.88rem;
+}
+
+.secondary-button:hover {
+    background: #edf5ff;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   PAGE 1 — MYSTERY OPENING
+===================================================== */
+
+.opening-page {
+    background:
+        radial-gradient(circle at 15% 20%, #eaf3ff 0%, transparent 30%),
+        radial-gradient(circle at 85% 80%, #edf5ff 0%, transparent 30%),
+        #ffffff;
+}
+
+.opening-content {
+    width: min(90%, 760px);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.crown-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.crown {
+    font-size: 3.2rem;
+    animation: crownFloat 3s ease-in-out infinite;
+}
+
+.crown-title h1 {
+    color: #123b7a;
+    font-size: clamp(2.5rem, 5vw, 4.6rem);
+}
+
+.heart {
+    font-size: 3.2rem;
+    margin: 18px 0;
+    animation: heartbeat 1.8s ease-in-out infinite;
+}
+
+.mystery-text {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.15rem, 2.2vw, 1.55rem);
+    color: #35567f;
+    line-height: 1.75;
+}
+
+.small-text {
+    margin-top: 12px;
+    color: #7890b5;
+    font-size: 0.92rem;
+}
+
+.opening-page .main-button {
+    margin-top: 28px;
+    animation: buttonPulse 2.2s ease-in-out infinite;
+}
+
+/* FLOATING BUTTERFLIES */
+
+.floating-butterfly {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.butterfly-one {
+    top: 15%;
+    left: 8%;
+    animation: butterflyFlyOne 9s ease-in-out infinite;
+}
+
+.butterfly-two {
+    top: 65%;
+    right: 8%;
+    animation: butterflyFlyTwo 11s ease-in-out infinite;
+}
+
+.butterfly-three {
+    bottom: 12%;
+    left: 25%;
+    animation: butterflyFlyThree 10s ease-in-out infinite;
+}
+
+/* SPARKLES */
+
+.sparkle {
+    position: absolute;
+    color: #d4af37;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    animation: sparkleAnimation 2.5s ease-in-out infinite;
+}
+
+.sparkle-one {
+    top: 18%;
+    right: 25%;
+}
+
+.sparkle-two {
+    top: 35%;
+    left: 18%;
+    animation-delay: 0.7s;
+}
+
+.sparkle-three {
+    bottom: 25%;
+    right: 22%;
+    animation-delay: 1.2s;
+}
+
+.sparkle-four {
+    bottom: 15%;
+    left: 12%;
+    animation-delay: 1.8s;
+}
+
+/* =====================================================
+   PAGE 2 — BIRTHDAY
+===================================================== */
+
+.birthday-page {
+    background:
+        radial-gradient(circle at 10% 10%, #e8f2ff 0%, transparent 30%),
+        radial-gradient(circle at 90% 90%, #edf5ff 0%, transparent 30%),
+        #ffffff;
+}
+
+.birthday-content {
+    width: min(90%, 800px);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.birthday-crown {
+    font-size: 3.2rem;
+    margin-bottom: 8px;
+    animation: crownFloat 3s ease-in-out infinite;
+}
+
+.birthday-content h1 {
+    color: #123b7a;
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+}
+
+.birthday-content h1 span {
+    color: #2563b8;
+}
+
+.divider {
+    margin: 20px auto;
+    width: 90px;
+    color: #d4af37;
+    font-size: 1.4rem;
+}
+
+.birthday-content > p:not(.little-heading) {
+    max-width: 680px;
+    margin: 14px auto;
+    color: #536b91;
+    font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+}
+
+.birthday-highlight {
+    font-size: clamp(1.15rem, 2vw, 1.35rem) !important;
+    color: #174ea6 !important;
+}
+
+/* =====================================================
+   PAGE 3 — MEMORIES
+===================================================== */
+
+.memory-page {
+    background: #f8fbff;
+}
+
+.memory-content {
+    width: min(92%, 900px);
+    height: 100%;
+    max-height: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 0;
+}
+
+.memory-content h1 {
+    color: #123b7a;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+.memory-content h1 span {
+    color: #2563b8;
+}
+
+.memory-intro {
+    color: #7185a3;
+    font-size: 0.95rem;
+    margin: 10px 0 18px;
+}
+
+.photo-book {
+    width: min(90%, 560px);
+    margin: 0 auto;
+}
+
+.photo-frame {
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 18px;
+    border: 1px solid #e1ebf8;
+    box-shadow: 0 18px 50px rgba(30, 70, 120, 0.13);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: min(38vh, 330px);
+    min-height: 180px;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    background: #f2f6fb;
+}
+
+#memoryCaption {
+    margin-top: 10px;
+    color: #48658d;
+    font-family: "Playfair Display", serif;
+    font-size: 1.05rem;
+}
+
+.photo-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.memory-ending {
+    color: #7185a3;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    margin-top: 10px;
+}
+
+.continue-memory {
+    margin-top: 10px;
+}
+
+/* =====================================================
+   PAGE 4 — BEHIND THE SCENES
+===================================================== */
+
+.behind-page {
+    background:
+        radial-gradient(circle at 15% 20%, #eaf3ff 0%, transparent 27%),
+        radial-gradient(circle at 85% 80%, #e8f2ff 0%, transparent 30%),
+        #ffffff;
+}
+
+.behind-content {
+    width: min(94%, 900px);
+    height: 100%;
+    max-height: 100vh;
+    max-height: 100dvh;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    text-align: center;
+    padding: 28px 10px 40px;
+
+    scrollbar-width: thin;
+}
+
+.behind-content h1 {
+    color: #123b7a;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+}
+
+.behind-intro {
+    color: #6d82a2;
+    font-size: 0.95rem;
+    margin: 8px 0 20px;
+}
+
+/* BUTTERFLY CHALLENGE */
+
+.challenge-card {
+    width: min(90%, 620px);
+    margin: auto;
+    padding: 26px;
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #dce9f9;
+    border-radius: 25px;
+    box-shadow: 0 18px 50px rgba(30, 70, 120, 0.12);
+}
+
+.challenge-icon {
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+}
+
+.challenge-card h2 {
+    color: #174ea6;
+    font-size: 1.7rem;
+}
+
+.challenge-card p {
+    color: #6c7f9d;
+}
+
+.butterfly-arena {
+    height: 190px;
+    margin-top: 16px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f5f9ff, #e8f2ff);
+    border: 1px dashed #b8cfee;
+}
+
+#butterfly {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+
+    transition:
+        left 0.7s ease,
+        top 0.7s ease;
+
+    animation: butterflyWings 0.8s ease-in-out infinite alternate;
+    z-index: 5;
+}
+
+.catch-text {
+    margin-top: 8px;
+    font-size: 0.82rem;
+}
+
+/* REVEALED MESSAGE */
+
+#caughtMessage {
+    display: none;
+}
+
+.message-card {
+    width: min(94%, 760px);
+    margin: 0 auto;
+    padding: 36px 40px;
+
+    background: #ffffff;
+    border-radius: 28px;
+    border: 1px solid #dce9f9;
+    box-shadow: 0 22px 65px rgba(30, 70, 120, 0.14);
+}
+
+.message-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.message-card h2 {
+    color: #174ea6;
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.message-card p {
+    color: #526987;
+    max-width: 650px;
+    margin: 16px auto;
+    font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+    line-height: 1.75;
+}
+
+.message-card strong {
+    color: #174ea6;
+    font-weight: 700;
+}
+
+.message-highlight {
+    font-size: clamp(1rem, 1.5vw, 1.18rem) !important;
+    color: #304f7d !important;
+}
+
+/* FINAL MESSAGE */
+
+.final-line {
+    font-family: "Playfair Display", serif;
+    color: #174ea6;
+    font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+    font-weight: 700;
+    margin-top: 28px;
+}
+
+.signature-line {
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(1.8rem, 3vw, 2.2rem) !important;
+    color: #315d9e !important;
+    line-height: 1.45 !important;
+    margin-top: 14px !important;
+}
+
+.from-line {
+    margin-top: 25px !important;
+    color: #8295b2 !important;
+    font-size: 0.85rem !important;
+    font-style: italic;
+}
+
+.saiteja-name {
+    margin-top: 3px;
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(2rem, 3.2vw, 2.4rem);
+    color: #174ea6;
+    font-weight: 500;
+}
+
+.version {
+    margin-top: 22px;
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    color: #9aaac0;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.12);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.08);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+@keyframes crownFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(2deg);
+    }
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+@keyframes sparkleAnimation {
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(0.8) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(20deg);
+    }
+}
+
+@keyframes butterflyWings {
+    from {
+        transform: translateY(0) rotate(-4deg);
+    }
+
+    to {
+        transform: translateY(-5px) rotate(4deg);
+    }
+}
+
+@keyframes butterflyFlyOne {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(120px, 60px) rotate(15deg);
+    }
+
+    50% {
+        transform: translate(250px, -20px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translate(100px, 100px) rotate(12deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes butterflyFlyTwo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    30% {
+        transform: translate(-130px, -80px);
+    }
+
+    60% {
+        transform: translate(-250px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes butterflyFlyThree {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    40% {
+        transform: translate(160px, -100px);
+    }
+
+    70% {
+        transform: translate(300px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .page {
+        min-height: 100dvh;
+    }
+
+    /* PAGE 1 */
+
+    .opening-content {
+        width: 92%;
+        padding: 20px 10px;
+    }
+
+    .crown-title {
+        gap: 8px;
+    }
+
+    .crown {
+        font-size: 2.1rem;
+    }
+
+    .crown-title h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .heart {
+        font-size: 2.5rem;
+        margin: 15px 0;
+    }
+
+    .mystery-text {
+        font-size: 1.05rem;
+        line-height: 1.65;
+    }
+
+    .small-text {
+        font-size: 0.82rem;
+    }
+
+    .opening-page .main-button {
+        margin-top: 22px;
+    }
+
+    .floating-butterfly {
+        font-size: 1.35rem;
+    }
+
+    .sparkle {
+        font-size: 1.1rem;
+    }
+
+    /* PAGE 2 */
+
+    .birthday-content {
+        width: 92%;
+        padding: 20px 10px;
+    }
+
+    .birthday-crown {
+        font-size: 2.5rem;
+    }
+
+    .birthday-content h1 {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+    }
+
+    .birthday-content > p:not(.little-heading) {
+        font-size: 0.93rem;
+        line-height: 1.65;
+    }
+
+    .birthday-highlight {
+        font-size: 1.1rem !important;
+    }
+
+    /* PAGE 3 */
+
+    .memory-content {
+        width: 94%;
+        padding: 14px 0;
+        justify-content: center;
+    }
+
+    .memory-content .little-heading {
+        margin-bottom: 8px;
+        font-size: 0.68rem;
+    }
+
+    .memory-content h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .memory-intro {
+        font-size: 0.82rem;
+        margin: 7px 0 12px;
+    }
+
+    .photo-book {
+        width: min(92%, 430px);
+    }
+
+    .photo-frame {
+        padding: 7px;
+        border-radius: 15px;
+    }
+
+    .photo-frame img {
+        height: min(40vh, 280px);
+        min-height: 160px;
+        border-radius: 10px;
+    }
+
+    #memoryCaption {
+        font-size: 0.95rem;
+        margin-top: 8px;
+    }
+
+    .photo-buttons {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .secondary-button {
+        padding: 8px 15px;
+        font-size: 0.76rem;
+    }
+
+    .memory-ending {
+        font-size: 0.75rem;
+        margin-top: 8px;
+    }
+
+    .continue-memory {
+        margin-top: 8px;
+        padding: 11px 24px;
+        font-size: 0.85rem;
+    }
+
+    /* PAGE 4 */
+
+    .behind-content {
+        width: 100%;
+        padding: 20px 8px 35px;
+    }
+
+    .behind-content .little-heading {
+        font-size: 0.68rem;
+        margin-bottom: 8px;
+    }
+
+    .behind-content h1 {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .behind-intro {
+        font-size: 0.82rem;
+        margin: 6px 0 15px;
+    }
+
+    .challenge-card {
+        width: 94%;
+        padding: 20px 14px;
+        border-radius: 20px;
+    }
+
+    .challenge-icon {
+        font-size: 2.3rem;
+    }
+
+    .challenge-card h2 {
+        font-size: 1.45rem;
+    }
+
+    .challenge-card p {
+        font-size: 0.88rem;
+    }
+
+    .butterfly-arena {
+        height: 165px;
+        margin-top: 13px;
+    }
+
+    #butterfly {
+        font-size: 2.2rem;
+    }
+
+    .message-card {
+        width: 94%;
+        padding: 26px 17px;
+        border-radius: 22px;
+    }
+
+    .message-icon {
+        font-size: 2rem;
+    }
+
+    .message-card h2 {
+        font-size: 1.55rem;
+        margin-bottom: 18px;
+    }
+
+    .message-card p {
+        font-size: 0.91rem;
+        line-height: 1.7;
+        margin: 14px auto;
+    }
+
+    .message-highlight {
+        font-size: 0.97rem !important;
+    }
+
+    .final-line {
+        font-size: 1.45rem;
+        margin-top: 25px;
+    }
+
+    .signature-line {
+        font-size: 1.9rem !important;
+    }
+
+    .from-line {
+        margin-top: 20px !important;
+    }
+
+    .saiteja-name {
+        font-size: 2.1rem;
+    }
+
+    .version {
+        font-size: 0.55rem;
+        letter-spacing: 1.5px;
+        margin-top: 18px;
+    }
+}
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 600px) and (max-height: 700px) {
+
+    .memory-content {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    .memory-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .memory-intro {
+        margin: 4px 0 8px;
+    }
+
+    .photo-frame img {
+        height: 30vh;
+        min-height: 140px;
+    }
+
+    .behind-content {
+        padding-top: 12px;
+    }
+
+    .challenge-card {
+        padding: 16px 12px;
+    }
+
+    .butterfly-arena {
+        height: 135px;
+    }
+
+    .message-card {
+        padding: 22px 15px;
+    }
+}
+
+/* =====================================================
+   LARGE LAPTOP / DESKTOP
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .photo-frame img {
+        height: min(40vh, 360px);
+    }
+
+    .message-card {
+        padding: 40px 48px;
+    }
+
+    .message-card p {
+        font-size: 1.08rem;
+    }
+}

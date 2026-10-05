@@ -1,0 +1,329 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Someone Special 💙</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="the_mountain.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <!-- PAGE 1 — MYSTERY OPENING -->
+    <section class="page opening-page" id="openingScreen">
+
+        <div class="floating-butterfly butterfly-one">🦋</div>
+        <div class="floating-butterfly butterfly-two">🦋</div>
+        <div class="floating-butterfly butterfly-three">🦋</div>
+
+        <div class="sparkle sparkle-one">✦</div>
+        <div class="sparkle sparkle-two">✧</div>
+        <div class="sparkle sparkle-three">✦</div>
+        <div class="sparkle sparkle-four">✧</div>
+
+        <div class="opening-content">
+
+            <div class="crown-title">
+                <span class="crown">👑</span>
+                <h1>Queen of Creativity</h1>
+            </div>
+
+            <div class="heart">💛</div>
+
+            <p class="mystery-text">
+                A little surprise is waiting<br>
+                for someone who makes<br>
+                ordinary things extraordinary...
+            </p>
+
+            <p class="small-text">
+                Are you ready to discover it? ✨
+            </p>
+
+            <button class="main-button" onclick="openGift()">
+                🎁 Tap to Begin
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 2 — BIRTHDAY REVEAL -->
+    <section class="page birthday-page" id="birthdayScreen">
+
+        <div class="blue-glow glow-one"></div>
+        <div class="blue-glow glow-two"></div>
+
+        <div class="birthday-content">
+
+            <div class="birthday-crown">👑</div>
+
+            <p class="little-heading">
+                Today is your special day ✨
+            </p>
+
+            <h1>
+                Happy Birthday,<br>
+                <span>Akka! 🎂</span>
+            </h1>
+
+            <div class="divider">
+                <span>✦</span>
+            </div>
+
+            <p class="birthday-highlight">
+                <strong>
+                    Today is all about you. 💙
+                </strong>
+            </p>
+
+            <p>
+                Your creativity, your memories,
+                your beautiful personality,
+                and everything that makes you
+                uniquely you.
+            </p>
+
+            <p>
+                Some people simply enter our lives...
+                <br>
+                and make them brighter. 🦋
+            </p>
+
+            <button class="main-button" onclick="continueStory()">
+                Continue → 🦋
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 3 — MEMORIES -->
+    <section class="page memory-page" id="memoryScreen">
+
+        <div class="memory-content">
+
+            <p class="little-heading">
+                A collection of little moments
+            </p>
+
+            <h1>
+                A Little Journey<br>
+                <span>Through Memories 📖</span>
+            </h1>
+
+            <p class="memory-intro">
+                Some moments are too beautiful
+                to be forgotten. 🤍
+            </p>
+
+            <div class="photo-book">
+
+                <div class="photo-frame">
+                    <img
+                        id="memoryPhoto"
+                        src="images/photo1.png"
+                        alt="A beautiful memory">
+                </div>
+
+                <p id="memoryCaption">
+                    A beautiful memory... 💙
+                </p>
+
+            </div>
+
+            <div class="photo-buttons">
+
+                <button class="secondary-button" onclick="previousPhoto()">
+                    ← Previous
+                </button>
+
+                <button class="secondary-button" onclick="nextPhoto()">
+                    Next →
+                </button>
+
+            </div>
+
+            <p class="memory-ending">
+                Four pictures.<br>
+                Countless memories. 💙
+            </p>
+
+            <button class="main-button continue-memory" onclick="goToFinalPage()">
+                Continue → ✨
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- PAGE 4 — BEHIND THE SCENES -->
+    <section class="page behind-page" id="finalScreen">
+
+        <div class="behind-content">
+
+            <p class="little-heading">
+                You saw the final result...
+            </p>
+
+            <h1>
+                Behind the Scenes 🎬
+            </h1>
+
+            <p class="behind-intro">
+                But you didn't see what happened
+                behind it. 👀
+            </p>
+
+
+            <!-- BUTTERFLY CHALLENGE -->
+            <div id="butterflyGame">
+
+                <div class="challenge-card">
+
+                    <div class="challenge-icon">
+                        🦋
+                    </div>
+
+                    <h2>
+                        One little challenge...
+                    </h2>
+
+                    <p>
+                        Can you catch the butterfly?
+                    </p>
+
+                    <div class="butterfly-arena">
+
+                        <div id="butterfly">
+                            🦋
+                        </div>
+
+                    </div>
+
+                    <p class="catch-text">
+                        Tap the butterfly! 😄
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- MESSAGE AFTER CATCHING BUTTERFLY -->
+            <div id="caughtMessage">
+
+                <div class="message-card">
+
+                    <div class="message-icon">
+                        ✨
+                    </div>
+
+                    <h2>
+                        One last thing I want to tell you… 💛
+                    </h2>
+
+                    <p class="message-highlight">
+                        I wanted to learn editing and creative skills,
+                        so I thought, why not start with something
+                        <strong>special for you?</strong>
+                    </p>
+
+                    <p class="message-highlight">
+                        This little birthday surprise is where
+                        <strong>I started learning.</strong> 🎬✨
+                    </p>
+
+                    <p>
+                        I know this is not perfect,
+                        but for me,
+                        <strong>it is the beginning.</strong>
+                    </p>
+
+                    <p class="message-highlight">
+                        For your next birthday, I promise I'll create
+                        an <strong>even better version</strong>
+                        than this. 🦋🎉
+                    </p>
+
+                    <p class="message-highlight">
+                        You are truly an
+                        <strong>inspiration to me</strong>
+                        when it comes to editing and creativity.
+                        👑✨
+                    </p>
+
+                    <p>
+                        Your creativity motivates me to learn,
+                        experiment, and become better.
+                    </p>
+
+                    <p class="message-highlight">
+                        So this is not just a birthday surprise for you…
+                        <br>
+                        <strong>
+                            It is also the beginning
+                            of my creative journey.
+                        </strong>
+                        💛
+                    </p>
+
+                    <div class="final-line">
+                        Happy Birthday once again, Akka! 🎂
+                    </div>
+
+                    <p class="signature-line">
+                        Keep creating.<br>
+                        Keep inspiring.<br>
+                        Keep shining. 👑💛
+                    </p>
+
+                    <div class="from-line">
+                        With love,
+                    </div>
+
+                    <div class="saiteja-name">
+                        Saiteja (Thammudu) 💙
+                    </div>
+
+                    <div class="version">
+                        VERSION 1.0 · SUCCESSFULLY DELIVERED ✓
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CONFETTI -->
+    <div id="confettiContainer"></div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
